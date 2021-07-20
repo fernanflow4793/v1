@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="author" content="Fernando Vazquez" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Experiment Page</title>
+
+    <script>
+        function showContent() {
+            // placeholder
+            // alert('Bet you didn\'t expect the Spanish Inquisition here');
+        }
+        function displayCanvas() {
+            var c = document.getElementById("myCanvas");
+            var ctx = c.getContext("2d");
+            ctx.beginPath();
+            ctx.arc(95,50,40,0,2*Math.PI);
+            ctx.stroke();
+        }
+    </script>
+    <style>
+        p {
+            text-align: left;
+        }
+    </style>
+</head>
+
+<body>
+  <header>
+    <h1>Experiments page</h1>
+      <p> This page is meant to use <em>all</em> the assigment <i>required tags.</i></p>
+    <hr />
+    test
+  </header>
+  <main>
+    <section id="text">
+        <h2>Text</h2>
+        <article>
+            <header>
+                <h3>Poem</h3>
+            </header>
+            <p>
+                i shall imagine life<br><br>
+
+                is not worth dying if<br>
+                (and when)roses complain<br>
+                their beauties are in vain<br><br>
+
+                but though mankind persuades<br>
+                itself that every weed’s<br>
+                a rose roses(you feel<br>
+                certain)will only smile<br>
+            </p>
+            <footer>
+                i shall imagine life by E.E. Cummings
+            </footer>
+        </article>
+        <article>
+            <header>
+                <h3>Art</h3>
+            </header>
+            <pre>
++88_
+_+880_
+_++88_
+_++88_
+__+880_________________________++_
+__+888________________________+88_
+__++880______________________+88_
+__++888_____+++88__________+++8_
+__++8888__+++8880++88____+++88_
+__+++8888+++8880++8888__++888_
+___++888++8888+++888888++888_
+___++88++8888++8888888++888_
+___++++++888888888888888888_
+____++++++88888888888888888_
+____++++++++000888888888888_
+_____+++++++000088888888888_
+______+++++++00088888888888_
+_______+++++++088888888888_
+_______+++++++088888888888_
+________+++++++8888888888_
+________+++++++0088888888_
+________++++++0088888888_
+________+++++0008888888_
+________#############_
+            </pre>
+            <p>
+                Emojis are overrated, bring back ASCII art!
+            </p>
+            <aside>
+                <p>
+                    ASCII art is a graphic design technique that consists of pictures
+                    pieced together from the printable characters defined by the ASCII Standard
+                </p>
+            </aside>
+            <p>
+                In all seriousness I too am an emoji lover, but who isn't? I just want to bring ASCII art the attention
+                it deserves, as it doesnt get as much attention nowadays.
+            </p>
+            <canvas id="myCanvas" width="200" height="100">
+                A circle should appear.
+            </canvas>
+            <button onclick="displayCanvas()">Click me!</button>
+        </article>
+        <article>
+            <header>
+                <h3>Javascript array appending</h3>
+            </header>
+            <p>
+                The <code>push()</code> method adds new items to the end of an array.
+            </p>
+        </article>
+        <article>
+            <header>
+                <h3>Quote</h3>
+                <figure>
+                    <figcaption><cite>Edsger Dijkstra:</cite></figcaption>
+                    <blockquote>If debugging is the process of removing software bugs,
+                        then programming must be the process of putting them in.</blockquote>
+                </figure>
+            </header>
+        </article>
+        <article>
+            <header>
+                <h3>Media</h3>
+            </header>
+            <div>
+                <video width="320" height="240" controls>
+                    <source src="videos/PexelsVideos1409899.mp4">
+                    Sorry, your browser doesn't support embedded videos.
+                </video>
+            </div>
+            <div>
+                <iframe title="roll" src="https://www.youtube.com/embed/LDU_Txk06tM">
+                </iframe>
+            </div>
+            <div>
+                <picture>
+                    <img src="./img/johannes-plenio-qkfxBc2NQ18-unsplash.jpg" width="320" height="240" alt="sunset">
+                </picture>
+            </div>
+            <div>
+                <figure>
+                    <figcaption>Listen to the Duck:</figcaption>
+                    <audio
+                            controls
+                            src="./sounds/Duck-quack.mp3">
+                        Your browser does not support the
+                        <code>audio</code> element.
+                    </audio>
+                </figure>
+            </div>
+            <div>
+                <p>Here lies my svg</p>
+                <svg width="100" height="100">
+                    <circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="yellow" />
+                </svg>
+            </div>
+        </article>
+        <article>
+            <header>
+                <h3>Button</h3>
+            </header>
+
+            <button onclick="showContent()">Show hidden content</button>
+
+            <template>
+                <p>
+                    Bet you didn't expect the Spanish Inquisition here
+                </p>
+            </template>
+
+            <details>
+                <summary>Details</summary>
+                No interactions are allowed at this stage, so its just a placeholder for now 😓
+            </details>
+
+        </article>
+    </section>
+    <section id="table">
+        <h2>Table</h2>
+        <article>
+            <header>
+                <h3>Classes I have taken table</h3>
+            </header>
+            <table>
+                <caption>Classes offered at UCSD</caption>
+                <colgroup>
+                    <col span="3" style="background-color: lightgray">
+                </colgroup>
+                <tr>
+                    <th scope="col">Class</th>
+                    <th scope="col">Type</th>
+                    <th scope="col">Quarter taken</th>
+                </tr>
+                <tr>
+                    <td>CSE 21</td>
+                    <td>major</td>
+                    <td>FA 18</td>
+                </tr>
+                <tr>
+                    <td>CSE 15L</td>
+                    <td>major</td>
+                    <td>FA 18</td>
+                </tr>
+                <tr>
+                    <td>BILD 10</td>
+                    <td>general ed</td>
+                    <td>FA 18</td>
+                </tr>
+                <tr>
+                    <td>ECE 35</td>
+                    <td>major</td>
+                    <td>FA 18</td>
+                </tr>
+            </table>
+        </article>
+    </section>
+    <section id="list">
+        <h2>Ordered List</h2>
+        <article>
+            <header>
+                <h3>Shopping List</h3>
+            </header>
+            <ol>
+                <li>milk</li>
+                <li>eggs</li>
+                <li>bread</li>
+                <li>
+                    <label for="ice-cream-choice">ice cream: </label>
+                    <input list="flavors" id="ice-cream-choice" name="ice-cream-choice" />
+
+                    <datalist id="flavors">
+                        <option value="Chocolate">
+                        <option value="Strawberry">
+                        <option value="Vanilla">
+                    </datalist>
+                </li>
+            </ol>
+        </article>
+    </section>
+    <section id="contactForm">
+        <h2>Feedback Form</h2>
+        <form>
+            <label for="fname">First Name</label>
+            <input type="text" id="fname" name="firstname" placeholder="Your name..">
+
+            <label for="lname">Last Name</label>
+            <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+
+            <label for="subject">Topic</label>
+            <select id="subject" name="subject">
+                <optgroup label="technical">
+                    <option value="css">css</option>
+                    <option value="issues">bugs</option>
+                    <option value="other">other</option>
+                </optgroup>
+                <optgroup label="other">
+                    <option value="grammar">grammar</option>
+                    <option value="content">content</option>
+                    <option value="other">other</option>
+                </optgroup>
+            </select>
+
+            <label for="message">Message</label>
+            <textarea id="message" name="message" placeholder="Message..."></textarea>
+
+            <fieldset>
+                <legend>Choose your favorite color</legend>
+
+                <input type="radio" id="blue" name="color">
+                <label for="blue">blue</label><br/>
+
+                <input type="radio" id="green" name="color">
+                <label for="green">green</label><br/>
+
+                <input type="radio" id="yellow" name="color">
+                <label for="yellow">yellow</label>
+            </fieldset>
+
+            <input type="submit" value="Submit">
+        </form>
+    </section>
+  </main>
+  <footer>
+    <hr />
+      This webpage was designed and created by <b>Fernando Vazquez</b>
+  </footer>
+</body>
+
+</html>
