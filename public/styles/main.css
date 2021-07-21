@@ -1,4 +1,9 @@
-* { border: solid 1px white; }
+@font-face {
+    font-family: Arvo;
+    src: url("../fonts/Arvo-Regular.ttf");
+}
+
+* { font-family: Arvo; }
 
 body {
     background-color: #0a192f;
@@ -8,13 +13,17 @@ main {
     margin: 0 80px 0 80px;
 }
 
+section {
+    margin: 20px 0 100px 0;
+}
+
 .mainHeader {
     margin-right: 30px;
 }
 
 a {
     text-decoration: none;
-    color: #64ffda;
+    color: #ff1600;
 }
 
 p {
@@ -24,10 +33,10 @@ p {
 /****** header ******/
 h1 {
     font-size: 1em;
-    color: #64ffda;
+    color: #ff1600;
 }
 
-.intro h2, .intro h3 {
+#intro h2, #intro h3 {
     margin: 0;
     font-size: 4em;
 }
@@ -35,13 +44,14 @@ h1 {
 h2 {
     color: #ccd6f6;
 }
+
 h3 {
     color: #a8b2d1;
 }
 
 h3 > a {
     position: relative;
-    color: #64ffda;
+    color: #ff1600;
     text-decoration: none;
 }
 
@@ -54,7 +64,7 @@ h3 > a::before {
     height: 2px;
     bottom: 0;
     left: 0;
-    background-color: #64ffda;
+    background-color: #ff1600;
     transform: scaleX(0);
     transform-origin: top left;
     transition: transform 0.3s ease;
@@ -62,12 +72,6 @@ h3 > a::before {
 
 h3 > a:hover::before {
     transform: scaleX(1);
-}
-
-/****** flex box ******/
-.flex-container {
-    display: flex;
-    flex-flow: row wrap;
 }
 
 /****** navbar ******/
@@ -80,6 +84,11 @@ h3 > a:hover::before {
     margin: 0;
     background: #0a192f;
     z-index: 2;
+
+    position: fixed;
+    top: 0;
+    width: 96%;
+    border-bottom: solid 1px #ff1600;
 }
 
 .navigation a {
@@ -89,12 +98,178 @@ h3 > a:hover::before {
 }
 
 .navigation a:hover {
-    color: #64ffda;
+    color: #ff1600;
+}
+
+#intro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#intro p {
+    max-width: 50ch;
+}
+
+.introBody {
+    margin: 20em 0 35em 0;
+}
+
+#about {
+    display: flex;
+    justify-content: space-around;
+}
+
+#about p {
+    font-size: 20px;
+}
+
+#about img {
+    float: left;
+    max-width: 30em;
+    max-height: 30em;
+}
+
+#about p {
+    max-width: 70ch;
+}
+
+.aboutBody {
+    margin-left: 20px;
+    flex-direction: column;
+}
+
+.aboutBody ul {
+    color: #8892b0;
+    list-style-type: none;
+    margin-left: 0;
+    padding-left: 0;
+    columns: 2;
+}
+
+.aboutBody li {
+    font-size: 18px;
+    padding-left: 1em;
+    text-indent: -1em;
+    margin: 0;
+}
+
+.aboutBody li::before {
+    content: "▹";
+    color: #ff1600;
+    font-size: 20px;
+}
+
+#experience {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#experience p {
+    font-size: 20px;
+    max-width: 60ch;
+}
+
+.experienceBody {
+    width: 70%;
+}
+
+#projects {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#projects article{
+    margin: 20px 0;
+}
+
+#projects div {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#projects p {
+    padding: 1em;
+    font-size: 20px;
+    max-width: 50ch;
+    color: #ffffff;
+}
+
+.project1, .project2, .project3 {
+    opacity: 70%;
+    height: 20em;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.project1 {
+    background-image: url("../img/ksigweb.PNG");
+}
+
+.project2 {
+    background-image: url("../img/cpu.PNG");
+}
+
+.project3 {
+    background-image: url("../img/flow.PNG");
+}
+
+#contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#contact article {
+    text-align: center;
+    padding-bottom: 100px;
+}
+
+#contact p {
+    font-size: 20px;
+    max-width: 70ch;
+}
+
+#contact h3 {
+    text-align: center;
+    font-size: 3em;
+}
+
+footer {
+    text-align: center;
+    color: #8892b0;
+    padding: 20px 80px 20px 80px;
+}
+
+button {
+    color: #ff1600;
+    border: solid 1px #ff1600;
+    height: 50px;
+    width: 100px;
+    background-color: transparent;
+}
+
+button:hover{
+    background-color: #233554;
+    cursor:pointer;
 }
 
 @media all and (max-width: 800px) {
     .navigation {
         justify-content: space-around;
+    }
+    #about {
+        flex-flow: column;
+        align-items: center;
     }
 }
 
@@ -102,6 +277,7 @@ h3 > a:hover::before {
     .navigation {
         flex-flow: column wrap;
         padding: 0;
+        border: none;
     }
     .navigation a {
         text-align: center;
@@ -112,75 +288,22 @@ h3 > a:hover::before {
     .navigation li:last-of-type a {
         border-bottom: none;
     }
-}
 
-footer {
-    text-align: center;
-    color: #8892b0;
-    padding: 20px 80px 20px 80px;
-}
+    #intro h2, #intro h3 {
+        font-size: 2em;
+    }
 
-.leftSide {
-    margin-top: 80px;
-    height: 100%;
-    width: 80px;
-    position: fixed;
-    z-index: 0;
-    top: 0;
-    left: 0;
-    color: #8892b0;
-    overflow-x: hidden;
-    padding-top: 20px;
-}
+    #about {
+        flex-flow: column;
+    }
 
-.rightSide {
-    margin-top: 80px;
-    height: 100%;
-    width: 80px;
-    position: fixed;
-    z-index: 0;
-    top: 0;
-    right: 0;
-    overflow-x: hidden;
-    padding-top: 20px;
-}
+    #about p, #experience p, #projects p {
+        font-size: 15px;
+        width: 25ch;
+    }
 
-.rightSide p {
-    writing-mode: vertical-rl;
-    text-orientation: mixed;
-    padding: 400px 20px 0 0;
-}
-
-.rightSide a {
-    color: #8892b0;
-}
-
-.rightSide a:hover {
-    color: #64ffda;
-}
-
-
-.leftSide a {
-    padding: 6px 8px 6px 16px;
-    text-decoration: none;
-    font-size: 25px;
-    color: #818181;
-    display: block;
-}
-
-.leftSide ul {
-    padding: 400px 0 0 0;
-    list-style-type: none;
-}
-
-.leftSide a:hover {
-    color: #f1f1f1;
-}
-
-.line {
-    position: absolute;
-    margin: 20px 0 0 23px;
-    width: 1px;
-    height: 20%;
-    background-color: #8892b0;
+    #projects div {
+        height: 100%;
+        width: 100%;
+    }
 }
