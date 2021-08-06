@@ -1,5 +1,6 @@
 {
   "projects": {
-    "default": "portfolio-6f8f3"
+    "default": "portfolio-6f8f3",
+    "test": "fernando-vazquez"
   }
 }
